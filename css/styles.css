@@ -1,0 +1,484 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #333;
+}
+
+nav {
+    background: #000;
+    padding: 0.9375rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .box {
+    display: flex;
+    gap: 0.3125rem;
+}
+
+nav .eye {
+    width: 0.625rem;
+    height: 0.625rem;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3.75rem;
+    margin-right: 1.5%;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+#landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 5rem 1.25rem 1.25rem;
+    gap: 3.125rem;
+    flex-wrap: wrap;
+}
+
+.landing_pic img {
+    width: 90%;
+    max-width: 30rem;
+    min-width: 18.75rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
+}
+
+.landing_text {
+    text-align: center;
+}
+
+.landing_small_text {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.landing_name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.625rem 0;
+}
+
+.landing_button {
+    margin: 1.25rem 0;
+    display: flex;
+    gap: 0.9375rem;
+    justify-content: center;
+}
+
+.landing_button button {
+    padding: 0.625rem 1.25rem;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.landing_button button:hover {
+    background: #f0f0f0;
+}
+
+.landing_icons {
+    display: flex;
+    gap: 0.9375rem;
+    justify-content: center;
+}
+
+.landing_icons i {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.landing_icons i:hover {
+    color: #333;
+}
+
+#project, #certification, #contact {
+    scroll-margin-top: 5rem;
+    padding: 5rem 0;
+    width: 100%;
+    margin: 0;
+}
+
+#project h1, #certification h1, #contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+}
+
+#project {
+    background: black;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.project-grid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.project-row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    flex: 1;
+    background: #fff;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+.project-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+}
+
+.project-item .overlay span {
+    color: #fff;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+}
+
+.project-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.see-more {
+    margin-top: 2.5rem;
+}
+
+.see-more a {
+    text-decoration: none;
+}
+
+.see-more p {
+    font-size: 1.125rem;
+    color: #fff;
+}
+
+.see-more i {
+    font-size: 1.25rem;
+    margin-left: 0.625rem;
+    color: #fff;
+    vertical-align: middle;
+}
+
+#certification {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.certification-container {
+    display: flex;
+    width: 100%;
+    max-width: 75rem;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.cert-list {
+    flex: 1;
+    min-width: 18.75rem;
+}
+
+.cert-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 0.625rem;
+    margin-bottom: 0.625rem;
+    padding: 0.9375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9375rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cert-item:hover {
+    background: #e0e0e0;
+    transform: translateX(0.3125rem);
+}
+
+.cert-item img {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+}
+
+.cert-item h3 {
+    font-size: 1.125rem;
+    color: #333;
+}
+
+.cert-preview {
+    flex: 2;
+    min-width: 18.75rem;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 0.625rem;
+    padding: 1.25rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cert-preview.active {
+    display: block;
+    opacity: 1;
+}
+
+.cert-preview h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+}
+
+.cert-preview p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.25rem;
+}
+
+.cert-preview button {
+    padding: 0.625rem 1.25rem;
+    border: none;
+    background: #333;
+    color: #fff;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cert-preview button:hover {
+    background: #555;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.contact_info {
+    display: flex;
+    justify-content: center;
+    gap: 1.875rem;
+    flex-wrap: wrap;
+}
+
+.contact_info .info {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.contact_info i {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.contact_info p {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact_info p a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact_info p:hover, .contact_info p a:hover {
+    color: #666;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 0.625rem;
+    width: 90%;
+    max-width: 50rem;
+    position: relative;
+    padding: 1.25rem;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 0.625rem;
+    right: 1.25rem;
+    font-size: 1.875rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: #666;
+}
+
+.modal.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    #landing {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .landing_button {
+        justify-content: center;
+    }
+
+    .landing_icons {
+        justify-content: center;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .certification-container {
+        flex-direction: column;
+    }
+
+    .cert-preview {
+        min-height: 12.5rem;
+    }
+
+    .project-row {
+        flex-direction: column;
+    }
+
+    .project-item img {
+        aspect-ratio: 4 / 3;
+    }
+
+    #project, #certification, #contact {
+        min-height: auto;
+        padding: 3rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    #project h1, #certification h1, #contact h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .see-more {
+        margin-top: 1.5rem;
+    }
+
+    .see-more p {
+        font-size: 1rem;
+    }
+
+    .see-more i {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #project h1, #certification h1, #contact h1 {
+        font-size: 1.5rem;
+    }
+
+    .see-more p {
+        font-size: 0.875rem;
+    }
+
+    .see-more i {
+        font-size: 1rem;
+    }
+}

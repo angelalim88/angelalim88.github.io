@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Angelico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="box">
+            <div class="eye"></div>
+            <div class="eye"></div>
+        </div>
+        <ul>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#certification">Certification</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="landing">
+        <div class="landing_pic">
+            <img src="images/profpic.png" alt="Profile Picture">
+        </div>
+        <div class="landing_text">
+            <p class="landing_small_text">Hello, I am</p>
+            <div class="h_container">
+                <p class="landing_name">Richard Angelico</p>
+            </div>
+            <div class="landing_button">
+                <button class="but landing_resume" onclick="alert('Resume download not implemented in this static example.')">
+                    Download CV
+                </button>
+                <button class="but landing_contact" onclick="location.href='#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div class="landing_icons">
+                <i class="fa-brands fa-linkedin-in" onclick="window.open('https://www.linkedin.com/in/richard-angelico-9a1425259/')"></i>
+                <i class="fa-brands fa-github" onclick="window.open('https://github.com/angelalim88')"></i>
+                <i class="fa-brands fa-instagram" onclick="window.open('https://www.instagram.com/richard_angelico/')"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="project">
+        <h1>Projects</h1>
+        <div class="project-grid">
+            <div class="project-row">
+                <div class="project-item">
+                    <img src="images/porto1.png" alt="Reusemart 1">
+                    <div class="overlay">
+                        <span>[View Project]</span>
+                    </div>
+                    <a href="https://github.com/angelalim88" class="project-link"></a>
+                </div>
+                <div class="project-item">
+                    <img src="images/porto1.png" alt="Reusemart 2">
+                    <div class="overlay">
+                        <span>[View Project]</span>
+                    </div>
+                    <a href="https://github.com/angelalim88" class="project-link"></a>
+                </div>
+                <div class="project-item">
+                    <img src="images/porto1.png" alt="Reusemart 3">
+                    <div class="overlay">
+                        <span>[View Project]</span>
+                    </div>
+                    <a href="https://github.com/angelalim88" class="project-link"></a>
+                </div>
+            </div>
+            <div class="project-row">
+                <div class="project-item">
+                    <img src="images/porto1.png" alt="Reusemart 4">
+                    <div class="overlay">
+                        <span>[View Project]</span>
+                    </div>
+                    <a href="https://github.com/angelalim88" class="project-link"></a>
+                </div>
+                <div class="project-item">
+                    <img src="images/porto1.png" alt="Reusemart 5">
+                    <div class="overlay">
+                        <span>[View Project]</span>
+                    </div>
+                    <a href="https://github.com/angelalim88" class="project-link"></a>
+                </div>
+                <div class="project-item">
+                    <img src="images/porto1.png" alt="Reusemart 6">
+                    <div class="overlay">
+                        <span>[View Project]</span>
+                    </div>
+                    <a href="https://github.com/angelalim88" class="project-link"></a>
+                </div>
+            </div>
+        </div>
+        <div class="see-more">
+            <a href="https://github.com/angelalim88">
+                <p>See More on Github <i class="fab fa-github"></i></p>
+            </a>
+        </div>
+    </section>
+
+    <section id="certification">
+        <h1>Certification</h1>
+        <div class="certification-container">
+            <div class="cert-list">
+                <div class="cert-item" onclick="showCert(1)">
+                    <img src="images/meta.png" alt="Meta Logo">
+                    <h3>React Basics</h3>
+                </div>
+                <div class="cert-item" onclick="showCert(2)">
+                    <img src="images/meta.png" alt="Meta Logo">
+                    <h3>Advanced React</h3>
+                </div>
+                <div class="cert-item" onclick="showCert(3)">
+                    <img src="images/meta.png" alt="Meta Logo">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="cert-item" onclick="showCert(4)">
+                    <img src="images/IBM.png" alt="IBM Logo">
+                    <h3>Backend Development</h3>
+                </div>
+                <div class="cert-item" onclick="showCert(5)">
+                    <img src="images/sucor.png" alt="Sucor Logo">
+                    <h3>Investment Banking</h3>
+                </div>
+            </div>
+            <div class="cert-preview" id="cert-preview-1">
+                <h2>React Basics - Meta</h2>
+                <p>Completed a comprehensive course on React fundamentals, covering components, state, and props.</p>
+                <button onclick="openModal('assets/Meta1.png')">View Certificate</button>
+            </div>
+            <div class="cert-preview" id="cert-preview-2">
+                <h2>Advanced React - Meta</h2>
+                <p>Advanced topics in React including hooks, context API, and performance optimization.</p>
+                <button onclick="openModal('assets/Meta2.png')">View Certificate</button>
+            </div>
+            <div class="cert-preview" id="cert-preview-3">
+                <h2>JavaScript - Meta</h2>
+                <p>Mastered JavaScript essentials, including ES6 features, asynchronous programming, and DOM manipulation.</p>
+                <button onclick="openModal('assets/Meta3.png')">View Certificate</button>
+            </div>
+            <div class="cert-preview" id="cert-preview-4">
+                <h2>Backend Development - IBM</h2>
+                <p>Learned backend development with Node.js, Express, and database management using IBM Cloud.</p>
+                <button onclick="openModal('assets/IBM.png')">View Certificate</button>
+            </div>
+            <div class="cert-preview" id="cert-preview-5">
+                <h2>Investment Banking - Sucor Sekuritas</h2>
+                <p>Gained insights into investment banking, including financial modeling and market analysis.</p>
+                <button onclick="openModal('assets/Sucor.png')">View Certificate</button>
+            </div>
+        </div>
+    
+        
+        <div class="modal" id="pdfModal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">×</span>
+                <img id="certViewer" src="" style="width: 100%; max-height: 80vh; object-fit: contain;">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Info</h1>
+        <div class="contact_info">
+            <div class="info">
+                <i class="fa-brands fa-linkedin"></i>
+                <p onclick="window.open('https://www.linkedin.com/in/richard-angelico-9a1425259/')">LinkedIn</p>
+            </div>
+            <div class="info">
+                <i class="fa-brands fa-instagram"></i>
+                <p onclick="window.open('https://www.instagram.com/richard_angelico/')">Instagram</p>
+            </div>
+            <div class="info">
+                <i class="fa-solid fa-envelope"></i>
+                <p><a href="mailto:richardangelico88@gmail.com">richardangelico88@gmail.com</a></p>
+            </div>
+            <div class="info">
+                <i class="fa-solid fa-mobile"></i>
+                <p>+62(821)-3680-2515</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showCert(certId) {
+            
+            document.querySelectorAll('.cert-preview').forEach(preview => {
+                preview.classList.remove('active');
+            });
+            
+            const selectedPreview = document.getElementById(`cert-preview-${certId}`);
+            if (selectedPreview) {
+                selectedPreview.classList.add('active');
+            }
+        }
+    
+        function openModal(imgPath) {
+            const modal = document.getElementById('pdfModal');
+            const certViewer = document.getElementById('certViewer');
+            certViewer.src = imgPath; 
+            modal.classList.add('active'); 
+        }
+    
+        function closeModal() {
+            const modal = document.getElementById('pdfModal');
+            const certViewer = document.getElementById('certViewer');
+            certViewer.src = ''; 
+            modal.classList.remove('active');
+        }
+    
+        
+        showCert(1);
+    </script>
+</body>
+</html>
