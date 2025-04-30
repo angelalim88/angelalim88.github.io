@@ -30,7 +30,7 @@
                 <p class="landing_name">Richard Angelico</p>
             </div>
             <div class="landing_button">
-                <button class="but landing_resume" onclick="alert('Resume download not implemented in this static example.')">
+                <button class="but landing_resume" onclick="downloadCV()">
                     Download CV
                 </button>
                 <button class="but landing_contact" onclick="location.href='#contact'">
@@ -176,7 +176,7 @@
             </div>
             <div class="info">
                 <i class="fa-solid fa-envelope"></i>
-                <p><a href="mailto:richardangelico88@gmail.com">richardangelico88@gmail.com</a></p>
+                <p><a href="mailto:richardangelico16@gmail.com">richardangelico16@gmail.com</a></p>
             </div>
             <div class="info">
                 <i class="fa-solid fa-mobile"></i>
@@ -212,6 +212,14 @@
             modal.classList.remove('active');
         }
     
+        function downloadCV() {
+            const link = document.createElement('a');
+            link.href = 'assets/RICHARD_CV.pdf';
+            link.download = 'RICHARD_CV.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
         
         showCert(1);
     </script>
