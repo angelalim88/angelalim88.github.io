@@ -6,12 +6,17 @@
     <title>Richard Angelico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
         <div class="box">
-            <div class="eye"></div>
-            <div class="eye"></div>
+            <div class="eye">
+                <div class="pupil"></div>
+            </div>
+            <div class="eye">
+                <div class="pupil"></div>
+            </div>
         </div>
         <ul>
             <li><a href="#project">Projects</a></li>
@@ -27,7 +32,7 @@
         <div class="landing_text">
             <p class="landing_small_text">Hello, I am</p>
             <div class="h_container">
-                <p class="landing_name">Richard Angelico</p>
+                <p class="landing_name" id="typed-name"></p>
             </div>
             <div class="landing_button">
                 <button class="but landing_resume" onclick="downloadCV()">
@@ -154,7 +159,6 @@
             </div>
         </div>
     
-        
         <div class="modal" id="pdfModal">
             <div class="modal-content">
                 <span class="close-btn" onclick="closeModal()">×</span>
@@ -187,7 +191,6 @@
 
     <script>
         function showCert(certId) {
-            
             document.querySelectorAll('.cert-preview').forEach(preview => {
                 preview.classList.remove('active');
             });
@@ -220,7 +223,45 @@
             link.click();
             document.body.removeChild(link);
         }
-        
+    
+        const nameElement = document.getElementById('typed-name');
+        const nameText = "Richard Angelico";
+        let index = 0;
+    
+        function typeName() {
+            if (index < nameText.length) {
+                nameElement.textContent += nameText.charAt(index);
+                index++;
+                setTimeout(typeName, 150);
+            } else {
+                nameElement.classList.add('blink-cursor');
+            }
+        }
+    
+        const pupils = document.querySelectorAll('.pupil');
+        document.addEventListener('mousemove', (e) => {
+            pupils.forEach(pupil => {
+                const eye = pupil.parentElement;
+                const eyeRect = eye.getBoundingClientRect();
+                const eyeCenterX = eyeRect.left + eyeRect.width / 2;
+                const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+    
+                const deltaX = e.clientX - eyeCenterX;
+                const deltaY = e.clientY - eyeCenterY;
+                const angle = Math.atan2(deltaY, deltaX) * 180 / Math.PI;
+    
+                const maxMove = (eyeRect.width - pupil.offsetWidth) / 2 - 0.08 * eyeRect.width; 
+                const pupilX = Math.cos(angle * Math.PI / 180) * maxMove;
+                const pupilY = Math.sin(angle * Math.PI / 180) * maxMove;
+    
+                pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+            });
+        });
+    
+        window.onload = function() {
+            typeName();
+        };
+    
         showCert(1);
     </script>
 </body>
