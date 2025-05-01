@@ -519,6 +519,9 @@ nav ul li a:hover {
     #project, #certification, #contact {
         min-height: auto;
         padding: 3rem 1rem;
+    }
+
+    #certification, #contact {
         margin-bottom: 2rem;
     }
 
@@ -561,4 +564,36 @@ nav ul li a:hover {
         font-size: 2rem;
         right: -10px;
     }
+}
+
+#tech-stack {
+    background: black;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.tech-stack-container {
+    width: 100%;
+    overflow: hidden; 
+}
+
+.tech-stack-icons {
+    display: flex;
+    gap: 1rem; 
+    animation: marquee 20s linear infinite; 
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-150%);
+    }
+}
+
+.tech-stack-icons img {
+    height: 30px;
+    object-fit: contain;
 }
