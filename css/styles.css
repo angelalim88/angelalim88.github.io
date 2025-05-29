@@ -82,9 +82,9 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
-.landing_pic img {
-    width: 90%;
+.landing_pic {
     max-width: 28rem;
+    width: 90%;
     border-radius: 0.625rem;
     box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
