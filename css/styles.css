@@ -83,8 +83,7 @@ nav ul li a:hover {
 }
 
 .landing_pic img {
-    max-width: 30rem;
-
+    max-width: 90%;
     border-radius: 0.625rem;
     box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
