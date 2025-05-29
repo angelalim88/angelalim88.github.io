@@ -84,7 +84,14 @@ nav ul li a:hover {
 
 .landing_pic {
     max-width: 28rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.landing_pic img {
     width: 90%;
+    max-width: 28rem;
     border-radius: 0.625rem;
     box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
@@ -239,7 +246,7 @@ nav ul li a:hover {
     position: relative;
     overflow: hidden;
     margin: 0;
-    flex: 0 0 16.666%;
+    flex: 0 0 20%; 
     background: #fff;
     box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
@@ -508,8 +515,10 @@ nav ul li a:hover {
         min-height: 12.5rem;
     }
 
-    .project-row {
-        flex-direction: column;
+    
+    .project-item {
+        flex: 0 0 20%; 
+        min-width: 0; 
     }
 
     .project-item img {
@@ -563,6 +572,11 @@ nav ul li a:hover {
     .blink-cursor::after {
         font-size: 2rem;
         right: -10px;
+    }
+
+    .project-item {
+        flex: 0 0 20%; 
+        min-width: 0;
     }
 }
 
